@@ -1,0 +1,14 @@
+name: "Echo Action"
+description: "A simple GitHub Action that echoes some text"
+author: "Dejan Lukic"
+inputs:
+  message:
+    description: "The message to echo"
+    required: false
+    default: "Hello from Echo Action!"
+runs:
+  using: "composite"
+  steps:
+    - run: echo "${{ inputs.message }}"
+      shell: bash
+
